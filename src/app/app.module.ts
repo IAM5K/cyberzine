@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule} from '@angular/forms';
 import { TeamComponent } from './team/team.component';
 import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     TeamComponent,
     NavComponent,
+    AboutComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,
