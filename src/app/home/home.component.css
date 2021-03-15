@@ -1,0 +1,31 @@
+.home-content{
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: black;
+}
+.vid-container{
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: auto;
+  background-color: black;
+}
+#cover-vid{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+.img-container{
+  width: 96%;
+  height: auto;
+  position: relative;
+  margin: auto;
+  background-color: greenyellow;
+}
+#cover-img{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
