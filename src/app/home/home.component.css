@@ -29,3 +29,75 @@
   width: 100%;
   height: auto;
 }
+.grad-bar {
+  width: 100%;
+  margin: auto;
+  height: 15px;
+  background: linear-gradient(-45deg, #212121, #500000,#00055c,#652d57, #5a3059,#00055c,#500000,#212121);
+  background-size: 400% 400%;
+    -webkit-animation: gradbar 25s ease infinite;
+    -moz-animation: gradbar 25s ease infinite;
+    animation: gradbar 25s ease infinite;
+}
+.previous-mag{
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  color: aliceblue;
+  overflow-y: auto;
+  background-image: linear-gradient(to top, #6e0d0d, #740c21, #761333, #751d44, #702854, #652d57, #5a3059, #4f3358, #40304c, #342b3e, #292730, #212121);
+}
+.previous-mag h1,h2 {
+  text-align: center;
+}
+.prev-card-detail{
+  width: 100%;
+  float: left;
+  height: auto;
+  position: relative;
+  /* background-color: yellowgreen; */
+  padding-top: 20px;
+}
+
+.thumbnail{
+  width: 40%;
+  position: relative;
+  margin-right: 5%;
+  margin-left: 5%;
+  float: left;
+  /* background-color: tomato; */
+  /* padding-top: 20px; */
+  padding-bottom: 50px;
+}
+
+p{
+  font-size: 1.2rem;
+  color: burlywood;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button{
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 6px;
+  margin-left: 5%;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:wheat;
+  text-decoration: none;
+  box-shadow: 1px blueviolet ;
+}
+
+@media only screen and (max-width: 768px){
+  .thumbnail{
+    width: 90%;
+    position: relative;
+    
+  }
+}
