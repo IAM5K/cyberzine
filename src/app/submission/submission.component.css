@@ -8,7 +8,7 @@
 
 }
 .grad-bar {
-    width: 96%;
+    width: 100%;
     margin: auto;
     height: 15px;
     background: linear-gradient(-45deg, #160000, #500000, #5a0000,#00055c,#45005d,#49003e,#440006,#000000);
