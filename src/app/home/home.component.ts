@@ -20,7 +20,11 @@ export class HomeComponent implements OnInit{
     this.hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
     this.mins = Math.floor ( (distance% (1000 * 60 * 60)) / (1000 * 60));
     this. secs = Math.floor ( (distance % (1000 * 60)) / (1000));
-    console. log (this . hours);
+    // console. log (distance);
+    // if(distance<906){
+    //   alert("Time over");
+    // }
+
     1000});
 
   ngOnInit(){
