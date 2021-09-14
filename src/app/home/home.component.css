@@ -94,21 +94,23 @@ button{
   box-shadow: 1px blueviolet ;
 }
 
-@media only screen and (max-width: 768px){
-  .thumbnail{
-    width: 90%;
-    position: relative;
-    
-  }
-}
+
 
 .countdown{
   position: relative;
   width: 100%;
-  background-color: wheat;
+  background-image: linear-gradient(to bottom, #000000, #0c0c0c, #141414, #1b1b1b, #212121);
+  /* background-color: wheat; */
+}
+.countdown h2{
+  position: relative;
+  color: whitesmoke;
+  margin: auto;
+  text-align: center;
+  /* background-color: wheat; */
 }
 .countdown ul{
-  background-color: white;
+  /* background-color: white; */
   list-style: none;
   width: 400px;
   margin: auto;
@@ -160,4 +162,26 @@ button{
   font-size: 1.5em !important;
   font-weight: bolder;
   margin: 0%; 
+}
+
+@media only screen and (max-width: 768px){
+  .thumbnail{
+    width: 90%;
+    position: relative;
+    
+  }
+  .countdown ul{
+    width: 95%;
+    padding: 0%;
+    margin: auto;
+    justify-content: center;
+  display: flex;
+  }
+  .countdown li{
+    position: relative;
+    /* width: 20%; */
+    padding:8px;
+    margin: 1%;
+    display: inline-flexbox;
+  }
 }
