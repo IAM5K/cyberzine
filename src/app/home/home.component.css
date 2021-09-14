@@ -39,6 +39,7 @@
     -moz-animation: gradbar 25s ease infinite;
     animation: gradbar 25s ease infinite;
 }
+
 .previous-mag{
   position: relative;
   width: 100%;
