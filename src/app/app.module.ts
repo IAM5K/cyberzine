@@ -12,7 +12,7 @@ import { TeamComponent } from './team/team.component';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { FaqComponent } from './faq/faq.component';
-
+import { CountdownModule } from 'ngx-countdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { FaqComponent } from './faq/faq.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    CountdownModule
   ],
   providers: [
   ],
