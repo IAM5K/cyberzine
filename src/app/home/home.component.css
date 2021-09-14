@@ -101,3 +101,63 @@ button{
     
   }
 }
+
+.countdown{
+  position: relative;
+  width: 100%;
+  background-color: wheat;
+}
+.countdown ul{
+  background-color: white;
+  list-style: none;
+  width: 400px;
+  margin: auto;
+  
+}
+@keyframes flickerAnimation {
+  0%   { opacity:0.5; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+}
+.countdown li{
+  position: relative;
+  height: 100%;
+  display: inline-block;
+  background-color: tomato;
+  border-radius: 8px;
+  padding: 15px;
+  margin-block-start: 0px;
+  margin: 1%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2em;
+  /* font-weight: bold; */
+  color: white;
+  
+}
+.countdown h4{
+  font-size: 1.5em !important;
+  font-weight: bolder;
+  margin: 0%; 
+}
