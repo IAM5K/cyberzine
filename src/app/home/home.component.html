@@ -1,7 +1,7 @@
 <div class="home-content">
   <div class="vid-container">
     <!-- <div>Iteration: <span id="iteration"></span></div> -->
-    <video allow="autoplay" id="cover-vid" autoplay controls loop plays-inline>
+    <video allow="autoplay" id="cover-vid" autoplay controls loop plays-inline *ngIf="timer">
       <source src="../../assets/video/Cyberzine_web.mp4" type="video/mp4">
       <source src="../../assets/video/Cyberzine'21.mkv" type="video/mkv">
       <source src="../../assets/video/Cyberzine'21.mov" type="video/mov">
@@ -12,7 +12,7 @@
 
 
   </div>
-  <div class="countdown">
+  <div class="countdown" *ngIf="timer">
     <br>
     <h2>CyberZine 2021 will be live in</h2>
     <br>
@@ -23,6 +23,15 @@
       <li><h4>{{secs}}</h4> Seconds</li>
     </ul>
     <br> 
+  </div>
+  
+  <div class="launch" *ngIf="!timer">
+    <img src="../../assets/img/Front.jpg" alt="Cyberzine2021">
+
+    <button class="control" (click)="toggle()">
+      <span class="pause-icon" *ngIf="!paused"></span>
+      <span class="play-icon" *ngIf="paused"></span>
+    </button>
   </div>
 
   <div class="previous-mag">
