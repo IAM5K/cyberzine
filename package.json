@@ -29,7 +29,10 @@
     "jquery": "^3.5.1",
     "ngx-countdown": "^12.0.1",
     "npm": "^7.23.0",
+    "canvas-confetti": "^0.0.3",
+    "core-js": "^2.5.7",
     "rxjs": "~6.6.0",
+    "rxjs-pausable": "^1.0.0-beta.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
