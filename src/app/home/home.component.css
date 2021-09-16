@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
 h1,h2,h3,h4{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -108,6 +111,14 @@ button{
   margin: auto;
   text-align: center;
 }
+.countdown p{
+  color: white;
+  font-family: 'Courgette', cursive !important;
+  text-align: justify;
+  font-size: 1.5em;
+  width: 80%;
+  margin: auto;
+}
 .countdown ul{
   list-style: none;
   width: 400px;
@@ -133,6 +144,12 @@ button{
   font-size: 1.5em !important;
   font-weight: bolder;
   margin: 0%; 
+}
+.cyvit-flyer{
+  position: relative;
+  width: 80%;
+  margin: 50px 10%;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 768px){
@@ -191,7 +208,7 @@ button{
   width: 99.5%;
   margin: auto;
   /* background-image: linear-gradient(to bottom, #000000, #0c0c0c, #141414, #1b1b1b, #212121); */
-  background-image: linear-gradient(to right bottom, #000000, #2c2b2c, #545354, #7e7e81, #926767, #babec2, #80cf85, #d7e1e7, #c8d7de,#9596ff, #baccd6, #abc2cd, #9cb8c4);
+  background-image: linear-gradient(to right bottom, #000000, #1f1f1f, #363636, #7e7e81, #abadb0, #babec2, #c8cfd5, #d7e1e7, #c8d7de, #baccd6, #abc2cd, #9cb8c4);
 
 }
 .launch img{
