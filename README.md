@@ -1,6 +1,6 @@
 # Cyberzine
 Cyberzine is annual Cyber Security magazine released by Division of Cyber Security and Digital Forensics at VIT Bhopal University. It is filled with interesting articles,news, tutorials and puzzles about Cyber Security and Digital Forensics, bringing to you professional knowledge in byte sized chunks. Read it now and get started with Cyber Security and Digital Forensics.
-
+### A MEAN Stack & Firebase based project: https://cyberzine.web.app/ 
 <!-- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Development server
