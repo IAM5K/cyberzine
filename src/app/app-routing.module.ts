@@ -11,9 +11,9 @@ const approot= {path:'root', component:AppComponent} ;
 const home = {path:'', component:HomeComponent} ;
 const about = {path:'about', component:AboutComponent} ;
 // const submission = {path:'submission', component:SubmissionComponent} ;
-// const team = {path:'team', component:TeamComponent} ;
+const team = {path:'team', component:TeamComponent} ;
 // const faq = {path:'faq', component:FaqComponent} ;
-const routes: Routes = [home,approot,about];
+const routes: Routes = [home,approot,about,team];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
