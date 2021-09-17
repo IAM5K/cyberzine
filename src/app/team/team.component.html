@@ -1,4 +1,4 @@
-<div class="team-year">
+<!-- <div class="team-year">
     <ul>
         <li>Teams in :</li>
         <li (click)="teamOf(21)"> 2021</li>
@@ -6,209 +6,45 @@
         <li (click)="teamOf(19)">2019</li>
     </ul>
 
-</div><br><br>
-<section class="team-detail">
+</div> -->
+<!-- <section class="team-detail">
 	<h1 class="dynamich1">Our Team</h1>
     <div class="box-card-container">
-        <div class="box-container">
+        <div class="box-container" *ngFor="let member of members">
             <section class="div1">
-                <img src="../../assets/img/team/Divyansh.jpg" alt="Divyansh Bhatia">
+                <img [src]="member?.img"  [alt]="member?.name">
             </section>
             <section class="div2">
-                <h4>Divyansh Bhatia</h4>            
-                <h5>Managing Head & Chief Editor</h5>
-                <h6>Cyber Security and Digital Forensics (2018)</h6>
+                <h4>{{member?.name}} </h4>            
+                <h5>{{member?.desig}} </h5>
+                <h6>{{member?.domain}} </h6>
                  <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://in.linkedin.com/in/divyanshbhatia250201" target="blank">
+                    <a href="" target="blank">
                         <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Ghanishth.jpg" alt="Ghanishth Goyal">
-            </section>
-            <section class="div2">
-                <h4>Ghanishth Goyal</h4>            
-                <h6>Co-Managing Head & Head Designer</h6>
-                <h6>Cyber Security and Digital Forensics (2019)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/ghanishth-goyal/" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Sandeep.jpg" alt="Sandeep Kumar">
-            </section>
-            <section class="div2">
-                <h4>Sandeep Kumar</h4>            
-                <h5>External Affairs - Head</h5>
-                <h6>Cyber Security and Digital Forensics (2018)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/sandeep-kumar-1680b0171/" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Anirudh.jpg" alt="Anirudh Agarwal">
-            </section>
-            <section class="div2">
-                <h4>Anirudh Agarwal</h4>            
-                <h5>Managing Editor</h5>
-                <h6>Cyber Security and Digital Forensics (2019)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/anirudh-agarwal-feb2000/" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Oorja.jpg" alt="Oorja Rungta">
-            </section>
-            <section class="div2">
-                <h4>Oorja Rungta</h4>            
-                <h5>External Affairs - Co-Head</h5>
-                <h6>Cyber Security and Digital Forensics (2019)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/oorja-rungta-91504b195/" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-    
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Aarushi.jpg" alt="Aarushi Koolwal">
-            </section>
-            <section class="div2">
-                <h4>Aarushi Koolwal</h4>            
-                <h5>Co-Head Columnist</h5>
-                <h6>Cyber Security and Digital Forensics (2019)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/aarushi-koolwal-b8b69a196" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-    
-    
-        <!--Members-->
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Arundhati.jpg" alt="Arundhati Menon">
-            </section>
-            <section class="div2">
-                <h4>Arundhati Menon</h4>            
-                <h5>Junior Editor</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/arundhati-menon-3b4524208" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Aditi.jpg" alt="Aditi Kurutala">
-            </section>
-            <section class="div2">
-                <h4>Aditi Kurutala</h4>            
-                <h5>Junior Editor</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/aditi-k-4246b3201" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i>
-                    </a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Shivyanshi.jpg" alt="Shivyanshi Shukla">
-            </section>
-            <section class="div2">
-                <h4>Shivyanshi Shukla</h4>            
-                <h5>Junior Editor</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/shivyanshi-shukla-05b576203" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Anamika.jpg" alt="Anamika Mittal">
-            </section>
-            <section class="div2">
-                <h4>Anamika Mittal</h4>            
-                <h5>Junior Editor</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/anamika-mittal-2a21211b4/" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Mansi.jpg" alt="Mansi Bakhshi">
-            </section>
-            <section class="div2">
-                <h4>Mansi Bakhshi</h4>            
-                <h5>Junior Columnist</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="http://linkedin.com/in/mansi-bakhshi-86b4751b3" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i>
-                    </a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Khushi.jpg" alt="Khushi Garg">
-            </section>
-            <section class="div2">
-                <h4>Khushi Garg</h4>            
-                <h5>Junior Columnist</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/khushi-garg-435b2b207" target="blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Saket.jpg" alt="Saket Upadhyay">
-            </section>
-            <section class="div2">
-                <h4>Saket Upadhyay</h4>            
-                <h5>Junior External Affair</h5>
-                <h6>Cyber Security and Digital Forensics (2018)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in" target="blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-        <div class="box-container">
-            <section class="div1">
-                <img src="../../assets/img/team/Vinayak.jpg" alt="Vinayak Agrawal">
-            </section>
-            <section class="div2">
-                <h4>Vinayak Agrawal</h4>            
-                <h5>Junior External Affair</h5>
-                <h6>Cyber Security and Digital Forensics (2020)</h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="https://www.linkedin.com/in/vinayak-agrawal-2aa5a61ab/" target="blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
                 </div> 
             </section>        
         </div>
     </div>
-</section>
+</section> -->
+<div class="team">
+    <h2>Meet Our Team</h2>
+    <br>
+    <div class="row">
+        <div class="column"  *ngFor="let member of members">
+            <div class="card">
+                <img [src]="member?.img" [alt]="member?.name" style="width:100%">
+                <div class="container">
+                    <h2>{{member?.name}}</h2>
+                    <p class="title">{{member?.desig}}</p>
+                    <p>{{member?.domain}}</p>
+                    <p>Find Me at : 
+                        <a href="" target="blank">
+                        <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
