@@ -1,19 +1,27 @@
 <div class="home-content">
   <div class="vid-container">
     <!-- <div>Iteration: <span id="iteration"></span></div> -->
-    <video allow="autoplay" id="cover-vid" autoplay controls loop plays-inline>
+    <video allow="autoplay" id="cover-vid" controls autoplay loop plays-inline *ngIf="timer">
       <source src="../../assets/video/Cyberzine_web.mp4" type="video/mp4">
       <source src="../../assets/video/Cyberzine'21.mkv" type="video/mkv">
       <source src="../../assets/video/Cyberzine'21.mov" type="video/mov">
       <source src="../../assets/video/Cyberzine'21.wmv" type="video/wmv">    
       <source src="../../assets/video/Cyberzine'21.webm" type="video/webm">
-      Your browser does not support the video tag.
+      Your browser does not support the video.
     </video>
 
 
   </div>
-  <div class="countdown">
-    <br> 
+  <div class="countdown" *ngIf="timer">
+    <br>
+      <p>Dear  Visitor, <br>
+        The moment you're waiting is almost here. CyberZine 2021 is getting launched on 18th September 2021 as a part of CyVIT 2021's inauguration. To join the grand inauguration of CyberZine, tune in to CyVIT at <a href="bit.ly/CYVIT2021">bit.ly/CYVIT2021</a>  and witness the inauguration live. <br>
+        Sincerely, <br>
+        Cyberzine Team.</p>
+    <img class="cyvit-flyer" src="../../assets/img/CyVIT 2021 Instagram Flyer.png" alt="">    
+
+    <h2>CyberZine 2021 will be live in</h2>
+    <br>
     <ul>  
       <li><h4>{{days}}</h4> Days </li>
       <li><h4>{{hours}}</h4>Hours </li>
@@ -22,9 +30,19 @@
     </ul>
     <br> 
   </div>
+  
+  <div class="launch" *ngIf="!timer">
+    <img src="../../assets/img/Front.jpg" alt="Cyberzine2021">
+
+    <button class="control" (click)="toggle()">
+      <span class="pause-icon" *ngIf="!paused"></span>
+      <span class="play-icon" *ngIf="paused"></span>
+    </button>
+  </div>
 
   <div class="previous-mag">
     <br><br>
+    
     <h1>Our Previous Releases</h1>
 
     <div class="prev-card-detail">
