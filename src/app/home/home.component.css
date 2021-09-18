@@ -211,16 +211,41 @@ button{
   background-image: linear-gradient(to right bottom, #000000, #1f1f1f, #363636, #7e7e81, #abadb0, #babec2, #c8cfd5, #d7e1e7, #c8d7de, #baccd6, #abc2cd, #9cb8c4);
 
 }
-.launch img{
+.cy2021{
   position: relative;
-  width: 80%;
-  left: 10%;
-  right: 10%;
-  height: auto;
+  width: 60%;
+  text-align: center;
   margin: auto;
 }
+.img21{
+  position: relative;
+  height: auto;
+  width: 50%;
+  align-items: center;
+}
+/* .launch img{
+  position: relative;  
+  height: 100%;
+  width: 60%;
+  margin-left: 25%;
+  margin-right: 25%;
+} */
+.release button{
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #513258;
+  color: white;
+}
 
-
+@media only screen and (max-width: 768px){
+  .cy2021{
+    width: 90%;
+  }
+  .img21{
+    width: 90%;
+  }
+}
 
 .control {
   border-radius: 50%;
