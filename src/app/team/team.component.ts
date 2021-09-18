@@ -29,15 +29,15 @@ export class TeamComponent implements OnInit {
     },
     {
       name:"Ghanishth Goyal",
-      img:"../../assets/img/team/Ghanishth.jpg",
-      desig:"Co-Managing Head & Designer Head",
+      img:"../../assets/img/team/Ghanisth.jpg",
+      desig:"Co-Managing Head & Designer",
       domain:"Cyber Security and Digital Forensics (2019)",
       linkedin:"https://www.linkedin.com/in/ghanishth-goyal/",
     },
     {
       name:"Sandeep Kumar",
       img:"../../assets/img/team/Sandeep.jpg",
-      desig:"Head External Affairs & Web Management",
+      desig:"Head External Affairs & Web",
       domain:"Cyber Security and Digital Forensics (2018)",
       linkedin:"https://www.linkedin.com/in/sandeep-kumar-1680b0171/",
     },
@@ -51,15 +51,15 @@ export class TeamComponent implements OnInit {
     {
       name:"Oorja Rungta",
       img:"../../assets/img/team/Oorja.jpg",
-      desig:"External Affairs - Co-Head",
+      desig:"Managing Editor",
       domain:"Cyber Security and Digital Forensics (2019)",
       linkedin:"https://www.linkedin.com/in/oorja-rungta-91504b195/",
     },
     {
-      name:"Aarushi Koolwal",
-      img:"../../assets/img/team/Aarushi.jpg",
-      desig:"Co-Head Columnist",
-      domain:"Cyber Security and Digital Forensics (2019)",
+      name:"Soumya Tiwari",
+      img:"../../assets/img/team/Soumya.jpg",
+      desig:"Managing Editor",
+      domain:"Cyber Security and Digital Forensics (2018)",
       linkedin:"https://www.linkedin.com/in/aarushi-koolwal-b8b69a196",
     },
     {
@@ -91,6 +91,13 @@ export class TeamComponent implements OnInit {
       linkedin:"https://www.linkedin.com/in/anamika-mittal-2a21211b4/",
     },
     {
+      name:"Aarushi Koolwal",
+      img:"../../assets/img/team/Aarushi.jpg",
+      desig:"Head Columnist",
+      domain:"Cyber Security and Digital Forensics (2019)",
+      linkedin:"https://www.linkedin.com/in/aarushi-koolwal-b8b69a196",
+    },
+    {
       name:"Mansi Bakhshi",
       img:"../../assets/img/team/Mansi.jpg",
       desig:"Columnist",
@@ -108,14 +115,14 @@ export class TeamComponent implements OnInit {
       name:"Saket Upadhyay",
       img:"../../assets/img/team/Saket.jpg",
       desig:"External Affair",
-      domain:"Cyber Security and Digital Forensics (2020)",
+      domain:"Cyber Security and Digital Forensics (2018)",
       linkedin:"",
     },
     {
       name:"Fardeen Ahemed",
-      img:"",
+      img:"../../assets/img/team/Fardeen.jpg",
       desig:"External Affair",
-      domain:"Cyber Security and Digital Forensics (2020)",
+      domain:"Cyber Security and Digital Forensics (2018)",
       linkedin:"",
     }
   ]
