@@ -340,4 +340,27 @@
 	
   }
   
-  
+  footer{
+		position: relative;
+		width: 100%;
+		bottom: 0%;
+		background-color: #761333;
+	}
+	.copyright{
+		color: #fff;
+		padding-top: 10px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-size: 1em;
+	}
+	.credits{
+		font-size: 0.9em;
+		color: wheat;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		padding: 10px;
+
+	}
+	.credits a{
+		text-decoration: none;
+		color: #0099ff;
+		font-weight: bold;
+	}
