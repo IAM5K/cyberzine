@@ -1,16 +1,10 @@
 <div class="home-content">
   <div class="vid-container">
     <!-- <div>Iteration: <span id="iteration"></span></div> -->
-    <video allow="autoplay" id="cover-vid" controls autoplay loop plays-inline *ngIf="timer">
-      <source src="../../assets/video/Cyberzine_web.mp4" type="video/mp4">
-      <source src="../../assets/video/Cyberzine'21.mkv" type="video/mkv">
-      <source src="../../assets/video/Cyberzine'21.mov" type="video/mov">
-      <source src="../../assets/video/Cyberzine'21.wmv" type="video/wmv">    
-      <source src="../../assets/video/Cyberzine'21.webm" type="video/webm">
+    <!-- <video allow="autoplay" id="cover-vid" controls autoplay loop plays-inline *ngIf="!timer">
+      <source src="../../assets/video/Cyberzine_2021.mp4" type="video/mp4">
       Your browser does not support the video.
-    </video>
-
-
+    </video> -->
   </div>
   <div class="countdown" *ngIf="timer">
     <br>
@@ -30,14 +24,15 @@
     </ul>
     <br> 
   </div>
-  
-  <div class="launch" *ngIf="!timer">
-    <img src="../../assets/img/Front.jpg" alt="Cyberzine2021">
-
-    <button class="control" (click)="toggle()">
-      <span class="pause-icon" *ngIf="!paused"></span>
-      <span class="play-icon" *ngIf="paused"></span>
-    </button>
+  <div class="launch">
+    <div class="cy2021">
+      <img class="img21" src="../../assets/img/Front.jpg" alt="Cyberzine2021">
+      <div class="release" *ngIf="!timer">
+        <h4 *ngIf="launched">Cyberzine has been Officially launched!</h4>
+        <button (click)="toggle() " *ngIf="!launched">Launch</button>
+        <a href="https://drive.google.com/file/d/1ZAyC5QCn1XehuAN4iWWyFzJi9JyeNIco/view?usp=sharing" *ngIf="launched" target="_blank"><button>Read Now!</button></a>
+      </div>
+    </div>
   </div>
 
   <div class="previous-mag">
@@ -50,14 +45,14 @@
         <h2>Cyberzine 2020</h2>
         <p>Release Date:&nbsp;&nbsp;&nbsp;<b>July 2020</b> </p>
         <img id="cover-img" src="../assets/img/cyberzine2020.jpg" alt="Cyberzine 2020">    
-        <p>Looks Intersting ?</p>
+        
         <a href="https://drive.google.com/file/d/18zavxd9BWlWGfsAun11_N2wDywptrhpS/view?usp=sharing" target="_blank"><button>Read Now!</button></a>
       </div>
       <div class="thumbnail">
         <h2>Cyberzine 2019</h2>
         <p>Release Date:&nbsp;&nbsp;&nbsp;<b>July 2019</b> </p>
         <img id="cover-img" src="../assets/img/cyberzine2019.jpg" alt="Cyberzine 2019">
-        <p>Looks Intersting ?</p>
+      
         <a href="https://drive.google.com/file/d/1XkemX4sP5InILzrroaQ_MgB1NWAS7tSI/view?usp=sharing" target="_blank"><button>Read Now!</button></a>
       </div>
     </div>
