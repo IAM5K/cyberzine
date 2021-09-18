@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PausableObservable, pausable } from 'rxjs-pausable';
 import { Subject, interval } from 'rxjs';
+import { Binary } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +15,10 @@ export class HomeComponent implements OnInit{
   hours:number;
   mins:number= 14;
   secs:number = 4;
+  launched:boolean=false;
 
   x=setInterval( ()=>{
-    var futureDate= new Date("Sep 18, 2021 10:05:00").getTime ();
+    var futureDate= new Date("Sep 18, 2021 11:10:00").getTime ();
     var today = new Date () .getTime ();
     var distance = futureDate - today;
     this.days = Math.floor (distance/ (1000 * 60 * 60 *24)); 
@@ -26,18 +28,17 @@ export class HomeComponent implements OnInit{
     // console. log (distance);
     if(distance<1000){
      this.timer=0; 
+     this.toggle();
     }
 
     1000});
 
-
     paused = true;
     pausable: PausableObservable<number>;
-  
     ngOnInit() {
       this.shoot();
       this.shoot2();
-      this.pausable = interval(500)
+      this.pausable = interval(800)
         .pipe(pausable()) as PausableObservable<number>;
       this.pausable.subscribe(this.shoot.bind(this));
       this.pausable.subscribe(this.shoot2.bind(this));
@@ -48,9 +49,10 @@ export class HomeComponent implements OnInit{
       if (this.paused) {
         this.pausable.resume();
       } else {
-        this.pausable.pause();
+        this.pausable.resume();
       }
-      this.paused = !this.paused;
+      // this.paused = !this.paused;
+      this.launched=true;
     }
   
     shoot() {
