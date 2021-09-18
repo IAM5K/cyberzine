@@ -7,25 +7,7 @@
     </ul>
 
 </div> -->
-<!-- <section class="team-detail">
-	<h1 class="dynamich1">Our Team</h1>
-    <div class="box-card-container">
-        <div class="box-container" *ngFor="let member of members">
-            <section class="div1">
-                <img [src]="member?.img"  [alt]="member?.name">
-            </section>
-            <section class="div2">
-                <h4>{{member?.name}} </h4>            
-                <h5>{{member?.desig}} </h5>
-                <h6>{{member?.domain}} </h6>
-                 <div class="socials"> Find Me at : &nbsp;
-                    <a href="" target="blank">
-                        <i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
-                </div> 
-            </section>        
-        </div>
-    </div>
-</section> -->
+
 <div class="team">
     <h2>Meet Our Team</h2>
     <br>
@@ -37,8 +19,8 @@
                     <h2>{{member?.name}}</h2>
                     <p class="title">{{member?.desig}}</p>
                     <p>{{member?.domain}}</p>
-                    <p>Find Me at : 
-                        <a href="" target="blank">
+                    <p><b>Find Me at :  </b>  
+                        <a [href]="member?.linkedin" target="blank">
                         <i class="fa fa-linkedin-square" style="font-size:24px"></i>
                         </a>
                     </p>
