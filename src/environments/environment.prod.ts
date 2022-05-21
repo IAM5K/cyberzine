@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: "412789122746",
     appId: "1:412789122746:web:c25d8bcad39edfb2c4c483",
     measurementId: "G-6062EECKK8"
-  }
+  },
+  GTM_ID:"GTM-KN8H4GK"
 };
