@@ -1,14 +1,9 @@
 .content-holder{
-	/* background-color:black; */
-	/* background-image: linear-gradient(to top, #6e0d0d, #740c21, #761333, #751d44, #702854, #652d57, #5a3059, #4f3358, #40304c, #342b3e, #292730, #212121); */
-
 	position: relative;
 	height: 94%;
 	width: 100%;
 	margin: auto;
   }
-  
-  
   #navigation{
 	height: 100px;
 	width: 100%;
@@ -51,7 +46,6 @@
 	width: 100%;
 	height: 10px;
 	background: linear-gradient(-45deg, #160000, #500000, #5a0000,#00044b,#46005d,#500044,#4d0006,#000000);
-	/* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB,#258f6c,#595ebc,#822da1); */
 	background-size: 400% 400%;
 	  -webkit-animation: gradbar 25s ease infinite;
 	  -moz-animation: gradbar 25s ease infinite;
@@ -159,7 +153,7 @@
   input {
 	border: 0;
 	border-left: 1px solid #ccc;
-	border-radius: 0; /* FOR SAFARI */
+	border-radius: 0;
 	outline: 0;
 	padding: 5px;
   }
@@ -339,28 +333,3 @@
    }
 	
   }
-  
-  footer{
-		position: relative;
-		width: 100%;
-		bottom: 0%;
-		background-color: #761333;
-	}
-	.copyright{
-		color: #fff;
-		padding-top: 10px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		font-size: 1em;
-	}
-	.credits{
-		font-size: 0.9em;
-		color: wheat;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		padding: 10px;
-
-	}
-	.credits a{
-		text-decoration: none;
-		color: #0099ff;
-		font-weight: bold;
-	}
