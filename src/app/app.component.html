@@ -1,27 +1,23 @@
-<div class="page-wrapper">
-    <div class="nav-wrapper">
-       <div class="grad-bar"></div>
-       <nav class="navbar">
-         <img class="logo" src="../assets/img/cyberzine_logo_21.png" alt="Logo">
-         <div class="menu-toggle" id="mobile-menu" >
-           <span class="bar"></span>
-           <span class="bar"></span>
-           <span class="bar"></span>
-         </div>
-         <ul class="nav no-search">
-           <li class="nav-item"><a href="">Home</a></li>
-           <li class="nav-item"><a href="about">About Us</a></li>
-           <!-- <li class="nav-item"><a href="submission">Submissions</a></li> -->
-           <!-- <li class="nav-item"><a href="">Team</a></li> -->
-           <!-- <li class="nav-item"><a href="faq">Queries</a></li> -->
-         </ul>
-       </nav>
-       <div class="grad-bar"></div>
-    </div>
-</div>
-<div class="content-holder">
-    <router-outlet></router-outlet>
-    <footer>
-      <p class="copyright" >All Rights Reserved by Division of Cyber Security and Digital Forensics | VIT Bhopal</p> <p class="credits">Developed and Maintained by : <a href="https://www.linkedin.com/in/sandeep-kumar-1680b0171/">SK</a>  | Cyberzine Team</p>
-    </footer>
-</div>
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" class="custom-ion-menu" 
+    [style.max-width]="onPc?'340px':'100%'" type="overlay">
+      <ion-content class="custom-ion-content">
+        <ion-img loading="lazy" src="assets/img/cyberzine_logo_21.png" alt="Cyberzine Logo" ></ion-img>
+        <ion-list id="inbox-list" style="padding:0px">
+          <ion-list-header>Division of Cyber Security and Digital Forensics</ion-list-header>
+          <ion-note class="bold" > 
+            <ion-text color="primary"> VIT Bhopal University</ion-text>
+          </ion-note>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>   
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

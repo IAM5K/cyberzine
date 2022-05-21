@@ -1,14 +1,7 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "hosting": {
+    "hosting": {
     "site":"cyberzine",
-    "public": "dist/cyberzine",
+    "public": "www/cyberzine",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -20,8 +13,5 @@
         "destination": "/index.html"
       }
     ]
-  },
-  "storage": {
-    "rules": "storage.rules"
   }
 }

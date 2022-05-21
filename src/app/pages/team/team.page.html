@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ title }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="team">
+          <ion-card class="team_member" *ngFor="let t of members">
+            <img class="member-img" loading="lazy" [src]="t?.img" [alt]="t?.name"/>
+            <ion-card-header>
+              <ion-card-subtitle class="bold" color="primary" >{{t?.desig}}</ion-card-subtitle>
+              <ion-card-title>{{t?.name}}</ion-card-title>
+              <p>{{t?.domain}}</p>
+              <p class="find-me">Find Me at :&nbsp;
+                <a [href]="t?.linkedin" target="blank">
+                  <ion-icon  class="linkedin-icon" name="logo-linkedin"></ion-icon>
+                </a>
+              </p>
+            </ion-card-header>
+          </ion-card>
+    </div>
+  </div>
+
+</ion-content>

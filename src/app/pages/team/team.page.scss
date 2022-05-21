@@ -1,0 +1,89 @@
+.team-column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .team-column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.team{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  // background-color: red; 
+}
+
+.team_member{
+  margin: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  border-radius: 6px;
+}
+.member-img{
+  width: 100%;
+  height: auto;
+}
+.member-name{
+  color: black;
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
+.role{
+  color: var(--pt-theme-primary);
+  margin: 12px 0;
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.member-desc{
+  color: #3b1975;
+}
+@media screen and (max-width:1080px) {
+
+  .wrapper{
+    height: fit-content;
+  }
+  .team .team_member{
+    margin-bottom: 15px;
+  }
+  
+}
+@media screen and (max-width:460px) {
+
+
+}
+@media screen and (max-width:360px) {
+
+  .team .team_member{
+    margin-bottom: 5px;
+  }
+  
+}
+.find-me{
+  display: inline-flex;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--ion-color-tertiary);
+  margin: 0%;
+}
+.linkedin-icon{
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 1.1rem;
+}

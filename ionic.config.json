@@ -1,0 +1,7 @@
+{
+  "name": "cyberzine",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

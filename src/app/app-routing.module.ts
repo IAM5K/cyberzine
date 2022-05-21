@@ -1,22 +1,38 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { TeamComponent } from './team/team.component';
-// import { FaqComponent } from './faq/faq.component';
-// import { SubmissionComponent } from './submission/submission.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const approot= {path:'root', component:AppComponent} ;
-const home = {path:'', component:HomeComponent} ;
-const about = {path:'about', component:AboutComponent} ;
-// const submission = {path:'submission', component:SubmissionComponent} ;
-const team = {path:'team', component:TeamComponent} ;
-// const faq = {path:'faq', component:FaqComponent} ;
-const routes: Routes = [home,approot,about,team];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'team',
+    loadChildren: () => import('./pages/team/team.module').then( m => m.TeamPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./pages/faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'submission',
+    loadChildren: () => import('./pages/rules/rules.module').then( m => m.RulesPageModule)
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

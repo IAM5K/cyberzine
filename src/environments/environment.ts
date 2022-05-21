@@ -15,7 +15,6 @@ export const environment = {
     measurementId: "G-6062EECKK8"
   }
 };
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 /*
  * For easier debugging in development mode, you can import the following file

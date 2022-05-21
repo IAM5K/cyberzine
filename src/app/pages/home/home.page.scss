@@ -1,0 +1,76 @@
+.home-content{
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+.img-container{
+  width: 96%;
+  height: auto;
+  padding-top: 5%;
+  position: relative;
+  margin: auto;
+}
+#cover-img{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.previous-mag{
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow-y: auto;
+  background-image: linear-gradient(to bottom, #eeeeee50, #ffffff50);
+}
+.previous-mag h1{
+  margin: 5% 0% 2% 0%;
+  text-align: center;
+}
+.previous-mag h2 {
+  margin: 0% 0% 2% 0%;
+  text-align: center;
+  color: var(--ion-color-primary);
+}
+.prev-card-detail{
+  width: 100%;
+  float: left;
+  height: auto;
+  position: relative;
+  padding-top: 20px;
+}
+
+.thumbnail{
+  width: 40%;
+  position: relative;
+  margin-right: 5%;
+  margin-left: 5%;
+  float: left;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px){
+  .thumbnail{
+    width: 90%;
+    position: relative;    
+  }
+}
+
+/* Launching*/
+.launch{
+  position: relative;
+  width: 100%;
+  margin:2% auto;
+}
+.cy2021{
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+.img21{
+  position: relative;
+  width: 50%;
+  align-items: center;
+  border-radius: 0px 6px 6px 0px ;
+}
