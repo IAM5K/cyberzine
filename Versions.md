@@ -5,3 +5,8 @@ v 0.0.3 : Navbar Stable.\
 v 0.0.4 : Home Page.\
 v 0.0.5 : Getting Ready to Launch\
 v 0.0.6 : Search engine optimization\
+v 1.0.0 : Cyberzine Released on 18 September 2021\
+
+v 2.0.0 : Cyberzine Recreated with ionic.\
+v 2.0.1 : Logo size reduced.\
+v 2.0.2 : Submission Rules Accessibilty patch.
