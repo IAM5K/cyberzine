@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
   title="CyberZine"
-
+  mag="Cyberzine 2021"
+  mags:any = ['Cyberzine 2021','Cyberzine 2020','Cyberzine 2019']
   constructor() { }
-
   ngOnInit() {
   }
 

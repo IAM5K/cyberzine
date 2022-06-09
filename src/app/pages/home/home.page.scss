@@ -1,76 +1,43 @@
 .home-content{
   width: 100%;
-  position: relative;
   height: auto;
 }
-
-.img-container{
-  width: 96%;
-  height: auto;
-  padding-top: 5%;
-  position: relative;
+.home-logo{
+  width: min(700px, 90%);
   margin: auto;
 }
-#cover-img{
-  position: relative;
-  width: 100%;
+.cover-page{
+  width: 95%;
   height: auto;
-}
-
-.previous-mag{
-  position: relative;
-  width: 100%;
-  height: auto !important;
-  overflow-y: auto;
-  background-image: linear-gradient(to bottom, #eeeeee50, #ffffff50);
-}
-.previous-mag h1{
-  margin: 5% 0% 2% 0%;
+  margin: auto;
   text-align: center;
 }
-.previous-mag h2 {
-  margin: 0% 0% 2% 0%;
-  text-align: center;
-  color: var(--ion-color-primary);
-}
-.prev-card-detail{
-  width: 100%;
-  float: left;
+.cover-img{
+  width: min(100%,500px);
   height: auto;
-  position: relative;
-  padding-top: 20px;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px var(--ion-color-light-tint);
 }
 
-.thumbnail{
-  width: 40%;
+.library{
   position: relative;
-  margin-right: 5%;
-  margin-left: 5%;
-  float: left;
-  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-
-@media only screen and (max-width: 768px){
-  .thumbnail{
-    width: 90%;
-    position: relative;    
+.library ion-button{
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2rem !important;
+  height: 50px;
+  width: auto;
+  margin: 8px;
+  @media screen and (max-width:768px) {
+    width: 140px;
   }
-}
-
-/* Launching*/
-.launch{
-  position: relative;
-  width: 100%;
-  margin:2% auto;
-}
-.cy2021{
-  position: relative;
-  text-align: center;
-  margin: auto;
-}
-.img21{
-  position: relative;
-  width: 50%;
-  align-items: center;
-  border-radius: 0px 6px 6px 0px ;
 }

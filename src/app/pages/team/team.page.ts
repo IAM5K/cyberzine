@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { TeamService } from 'src/app/services/team/team.service';
 
 @Component({
   selector: 'app-team',
@@ -8,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class TeamPage implements OnInit {
 
   title="Our Team"
-  constructor() { }
+  constructor(
+    private teamService: TeamService
+  ) { }
 
   members:any=[
     {
@@ -118,6 +122,14 @@ export class TeamPage implements OnInit {
     }
   ]
   ngOnInit() {
+    // console.log(this.members[0])
+    this.teamService.getTeams('2021').subscribe(res=>{console.log('query',res)})
+    // this.teamService.addMember(this.members[0])
   }
 
+  // addMemeber(){
+  //   const fileRef=""
+  //   this.storage.upload
+  // }
+  // gs://cyberzine-4b9cb.appspot.com/teams/2021
 }
