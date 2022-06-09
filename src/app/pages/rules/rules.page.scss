@@ -1,35 +1,33 @@
 .submission-frame{
   height: auto;
   width: 100%;
-  position: relative;
 }
 .rules{
   position: relative;
-  width: 96%;
+  width: 100%;
   margin: auto;
   height:auto;
-  padding: 4%;
+  padding:max(2%,20px);
   text-align: justify;
+  font-family:serif;
+  font-size: 1.2rem;
 }
 .rules>h1{
   font-family: sans-serif;
   margin: 0px;
+  font-size: 1.7rem;
+}
+.rules li{
+  padding-bottom: 10px;
 }
 .rules>p{
-  font-family:Georgia, Times, 'Times New Roman', serif;
   color: var(--ion-color-primary);
   font-weight: bold;
 }
 .rules i{
   color: var(--ion-color-danger-tint);
 }
-.rules li{
-  font-family:Georgia, Times, 'Times New Roman', serif; 
-  font-size: 1.1rem !important;
-}
 .rules sub{
-  font-family:Georgia, Times, 'Times New Roman', serif; 
-  font-size: 1.1rem;
   color:rgb(94, 255, 0);
   font-weight: bold;
   padding-bottom: 10px;
