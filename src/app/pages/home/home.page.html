@@ -6,7 +6,6 @@
     <ion-title>{{ title }}</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -17,68 +16,26 @@
   <div id="container">
     <div class="home-content">
       <div class="first-screen">
-        <ion-img class="home-logo" src="assets/img/cyberzine_logo.png" alt="Cyberzine Logo"></ion-img>
+        <!-- <ion-img class="home-logo cyberzine-logo" src="assets/img/cyberzine_logo.png" alt="Cyberzine Logo"></ion-img> -->
         <h1 class="explore-release bold ion-text-center">Explore the releases</h1>
         <div class="library">
-          <ion-button *ngFor="let item of mags" class="ion-text-wrap" (click)="mag=item" [color]="mag==item? 'primary':'medium' ">{{item}}</ion-button>
+          <ion-button *ngFor="let item of mags" class="ion-text-wrap bold" (click)="mag=item" [color]="mag==item? 'primary':'medium' ">{{item}}</ion-button>
         </div>
         <div class="cover-page">
           <img class="cover-img" loading="lazy" [src]="'assets/img/'+ mag+'.jpg'" [alt]="'assets/img/'+ mag+'.jpg'">
         </div>
         <div class="library">
-          <!-- <ion-button (click)="" >Read Now!</ion-button> -->
-          <ion-button (click)="downloadMag()" >Download</ion-button>
+          <a *ngIf="mag=='Cyberzine 2021'" href="https://drive.google.com/file/d/1ZAyC5QCn1XehuAN4iWWyFzJi9JyeNIco/view?usp=sharing" target="_blank">
+            <ion-button>Read Now!</ion-button>
+          </a>
+          <a *ngIf="mag=='Cyberzine 2020'" href="https://drive.google.com/file/d/18zavxd9BWlWGfsAun11_N2wDywptrhpS/view?usp=sharing" target="_blank">
+            <ion-button>Read Now!</ion-button>
+          </a>
+          <a *ngIf="mag=='Cyberzine 2019'" href="https://drive.google.com/file/d/1XkemX4sP5InILzrroaQ_MgB1NWAS7tSI/view?usp=sharing" target="_blank">
+            <ion-button>Read Now!</ion-button>
+          </a>
         </div>
       </div>
-       <!--<div class="launch">
-        <div class="cy2021">
-          <img class="img21" src="../../assets/img/Front.jpg" alt="Cyberzine2021"> 
-          <div class="release">
-            <a href="https://drive.google.com/file/d/1ZAyC5QCn1XehuAN4iWWyFzJi9JyeNIco/view?usp=sharing"
-              target="_blank">
-              <ion-button>Read Now!</ion-button>
-            </a>
-            <a href="https://drive.google.com/file/d/1ZAyC5QCn1XehuAN4iWWyFzJi9JyeNIco/view?usp=sharing"
-              target="_blank">
-              <ion-button>Download Now!</ion-button>
-            </a>
-          </div>
-        </div>
-      </div><br>
-      <hr>
-      <div class="previous-mag">
-        <ion-text>
-          <h1 class="bold">Our Previous Releases</h1>
-        </ion-text>
-        <div class="prev-card-detail">
-          <div class="thumbnail">
-            <h2>Cyberzine 2020</h2>
-            <img loading="lazy" id="cover-img" src="../assets/img/cyberzine2020.jpg" alt="Cyberzine 2020">
-            <ion-text class="bold" color="success">
-              <p>Release Date:&nbsp;&nbsp;July 2020</p>
-            </ion-text>
-            <a href="https://drive.google.com/file/d/18zavxd9BWlWGfsAun11_N2wDywptrhpS/view?usp=sharing"
-              target="_blank">
-              <ion-button>Read Now!</ion-button>
-            </a>
-          </div>
-          <div class="thumbnail">
-            <h2>Cyberzine 2019</h2>
-            <img loading="lazy" id="cover-img" src="../assets/img/cyberzine2019.jpg" alt="Cyberzine 2019">
-            <ion-text class="bold" color="success">
-              <p>Release Date:&nbsp;&nbsp;July 2019</p>
-            </ion-text>
-            <a href="https://drive.google.com/file/d/1XkemX4sP5InILzrroaQ_MgB1NWAS7tSI/view?usp=sharing"
-              target="_blank">
-              <ion-button>Read Now!</ion-button>
-            </a>
-          </div>
-        </div>
-      </div>-->
-      <!-- <div class="home-submission">
-        <h3>Sounds Intersting?</h3>
-        <p class="interested">Join us today and be the part of community. </p>
-      </div> -->
     </div>
 
   </div>
