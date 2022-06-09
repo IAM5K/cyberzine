@@ -2,49 +2,14 @@
   min-height: 100% !important;
   width: 100%;
   position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 .faq-content{
-  width: 96%;
-  padding: 2% 4%;
+  width: 100%;
+  padding: 0px max(1%,20px) ;
   margin: auto;
   text-align: justify;
-  padding-bottom:2% !important ;
-}
-.faq-content li{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.1rem;
-}
-@media only screen and (min-width: 768px){
-  .faq-content li{
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      font-size: 1.3rem;
-  }
-}
-.form{
-  position: relative;
-  width: 96%;
-  margin: auto;
-  height: 900px;
-}
-.form>iframe{
-  position: relative;
-  padding-top: 2%;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-@media only screen and (max-width: 720px) {
-  .form{
-      height: 900px;
-  }
-}
-.grad-bar {
-  width: 100%;
-  margin: auto;
-  height: 15px;
-  background: linear-gradient(-45deg, #212121, #500000,#00055c,#652d57, #5a3059,#00055c,#500000,#212121);
-  background-size: 400% 400%;
-    -webkit-animation: gradbar 25s ease infinite;
-    -moz-animation: gradbar 25s ease infinite;
-    animation: gradbar 25s ease infinite;
+  margin-bottom:2%;
+  font-size: 1.2rem;
 }

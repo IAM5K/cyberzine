@@ -8,7 +8,7 @@ import { QueryService } from 'src/app/services/query/query.service';
   styleUrls: ['./faq.page.scss'],
 })
 export class FaqPage implements OnInit {
-  title="Frequently Asked Questions"
+  title="FAQ"
 
   queryCollection: AngularFirestoreCollection;
   constructor(
@@ -42,9 +42,9 @@ export class FaqPage implements OnInit {
 
   ngOnInit() {
     // this.postQuery(this.inputQuery)
-    this.queryService.getQuery().subscribe(res=>{
-      console.log('query',res)
-    })
+    // this.queryService.getQuery().subscribe(res=>{
+    //   console.log('query',res)
+    // })
 
   }
 
