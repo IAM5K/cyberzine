@@ -29,7 +29,7 @@ export class AppComponent {
     this.confSidenav()
   }
   confSidenav(){    
-    if(this.innerWidth<991){
+    if(this.innerWidth<992){
       this.onPc=false
     }
     else{
