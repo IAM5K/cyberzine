@@ -19,20 +19,21 @@
         <!-- <ion-img class="home-logo cyberzine-logo" src="assets/img/cyberzine_logo.png" alt="Cyberzine Logo"></ion-img> -->
         <h1 class="explore-release bold ion-text-center">Explore the releases</h1>
         <div class="library">
-          <ion-button *ngFor="let item of mags" class="ion-text-wrap bold" (click)="mag=item" [color]="mag==item? 'primary':'medium' ">{{item}}</ion-button>
+          <button *ngFor="let item of mags" class="ion-text-wrap bold opt-btn" (click)="mag=item" 
+          [ngClass]="{'active-btn': mag==item, 'inactive-btn':mag!==item}" >{{item}}</button>
         </div>
         <div class="cover-page">
-          <img class="cover-img" loading="lazy" [src]="'assets/img/'+ mag+'.jpg'" [alt]="'assets/img/'+ mag+'.jpg'">
+          <img class="cover-img" loading="lazy" [src]="'assets/img/'+ mag+'.jpg'" [alt]="'assets/img/'+ mag+'.jpg'+'Front page of Cyberzine'">
         </div>
         <div class="library">
           <a *ngIf="mag=='Cyberzine 2021'" href="https://drive.google.com/file/d/1ZAyC5QCn1XehuAN4iWWyFzJi9JyeNIco/view?usp=sharing" target="_blank">
-            <ion-button>Read Now!</ion-button>
+            <button class="opt-btn read-btn">Read Now!</button>
           </a>
           <a *ngIf="mag=='Cyberzine 2020'" href="https://drive.google.com/file/d/18zavxd9BWlWGfsAun11_N2wDywptrhpS/view?usp=sharing" target="_blank">
-            <ion-button>Read Now!</ion-button>
+            <button class="opt-btn read-btn">Read Now!</button>
           </a>
           <a *ngIf="mag=='Cyberzine 2019'" href="https://drive.google.com/file/d/1XkemX4sP5InILzrroaQ_MgB1NWAS7tSI/view?usp=sharing" target="_blank">
-            <ion-button>Read Now!</ion-button>
+            <button class="opt-btn read-btn">Read Now!</button>
           </a>
         </div>
       </div>

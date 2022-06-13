@@ -12,18 +12,22 @@
 }
 .cover-page{
   width: 95%;
-  height: auto;
+  min-height: 510px;
+  max-height: fit-content;
   margin: auto;
   text-align: center;
+  @media screen and (min-width:768px) {
+    min-height: 710px;
+  }
 }
 .cover-img{
+  // display: none;
   width: min(100%,500px);
   height: auto;
   margin: auto;
   border-radius: 6px;
   box-shadow: 0px 0px 5px var(--ion-color-light-tint);
 }
-
 .library{
   position: relative;
   display: flex;
@@ -31,17 +35,31 @@
   width: 100%;
   margin: auto;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-.library ion-button{
-  box-sizing: border-box;
-  text-align: center;
+.opt-btn{
+  border-radius: 5px;
   font-size: 1rem;
-  line-height: 2rem !important;
-  height: 50px;
+  font-weight: bold;
+  padding: 12px;
   width: auto;
-  margin: 8px;
+  margin: 6px;
+  background-color: var(--ion-color-medium);
+  color: white;
+  text-transform: uppercase;
+  transition: 0.7s;
   @media screen and (max-width:768px) {
     width: 140px;
   }
+}
+.active-btn{
+  background-color: var(--ion-color-secondary);
+  color: var(--ion-color-dark);
+}
+.inactive-btn:hover{
+  opacity: 0.9;
+}
+.read-btn:hover{
+  background-color: var(--ion-color-secondary);
+  color: var(--ion-color-dark);
 }

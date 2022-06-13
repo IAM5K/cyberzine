@@ -34,7 +34,7 @@ export class TeamPage implements OnInit {
       img:"assets/img/team/Sandeep.jpg",
       desig:"Head External Affairs & Web",
       domain:"Cyber Security and Digital Forensics (2018)",
-      linkedin:"https://www.linkedin.com/in/sandeep-kumar-1680b0171/",
+      linkedin:"https://www.linkedin.com/in/IAM5K/",
     },
     {
       name:"Anirudh Agarwal",

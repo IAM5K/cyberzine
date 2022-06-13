@@ -16,10 +16,12 @@
 
   <div id="container">
     <div class="team">
-          <ion-card class="team_member" *ngFor="let t of members">
-            <img class="member-img" loading="lazy" [src]="t?.img" [alt]="t?.name"/>
+          <ion-card class="team_member" *ngFor="let t of members; index as i">
+            <div class="team-img-container">
+              <img class="member-img" [loading]="i > 3? 'lazy':'eager'" [src]="t?.img" [alt]="t?.name"/>
+            </div>
             <ion-card-header>
-              <ion-card-subtitle class="bold" color="primary" >{{t?.desig}}</ion-card-subtitle>
+              <ion-card-subtitle class="bold role"  >{{t?.desig}}</ion-card-subtitle>
               <ion-card-title>{{t?.name}}</ion-card-title>
               <p>{{t?.domain}}</p>
               <p class="find-me">Find Me at :&nbsp;
