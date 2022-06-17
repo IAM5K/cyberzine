@@ -13,10 +13,11 @@ export class TeamPage implements OnInit {
   constructor(
     private teamService: TeamService
   ) { }
-
+    loadMode="lazy"
   members:any=[
     {
       name:"Divyansh Bhatia",
+      load:"eager",
       img:"assets/img/team/Divyansh.jpg",
       desig:"Managing Head & Chief Editor",
       domain:"Cyber Security and Digital Forensics (2018)",
@@ -24,6 +25,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Ghanishth Goyal",
+      load:"lazy",
       img:"assets/img/team/Ghanisth.jpg",
       desig:"Co-Managing Head & Designer",
       domain:"Cyber Security and Digital Forensics (2019)",
@@ -31,6 +33,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Sandeep Kumar",
+      load:"lazy",
       img:"assets/img/team/Sandeep.jpg",
       desig:"Head External Affairs & Web",
       domain:"Cyber Security and Digital Forensics (2018)",
@@ -38,6 +41,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Anirudh Agarwal",
+      load:"lazy",
       img:"assets/img/team/Anirudh.jpg",
       desig:"Managing Editor",
       domain:"Cyber Security and Digital Forensics (2019)",
@@ -45,6 +49,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Oorja Rungta",
+      load:"lazy",
       img:"assets/img/team/Oorja.jpg",
       desig:"Managing Editor",
       domain:"Cyber Security and Digital Forensics (2019)",
@@ -52,6 +57,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Soumya Tiwari",
+      load:"lazy",
       img:"assets/img/team/Soumya.jpg",
       desig:"Managing Editor",
       domain:"Cyber Security and Digital Forensics (2018)",
@@ -59,6 +65,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Arundhati Menon",
+      load:"lazy",
       img:"assets/img/team/Arundhati.jpg",
       desig:"Editor",
       domain:"Cyber Security and Digital Forensics (2020)",
@@ -66,6 +73,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Aditi Kurutala",
+      load:"lazy",
       img:"assets/img/team/Aditi.jpg",
       desig:"Editor",
       domain:"Cyber Security and Digital Forensics (2020)",
@@ -73,6 +81,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Shivyanshi Shukla",
+      load:"lazy",
       img:"assets/img/team/Shivyanshi.jpg",
       desig:"Editor",
       domain:"Cyber Security and Digital Forensics (2020)",
@@ -80,6 +89,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Anamika Mittal",
+      load:"lazy",
       img:"assets/img/team/Anamika.jpg",
       desig:"Editor",
       domain:"Cyber Security and Digital Forensics (2020)",
@@ -87,6 +97,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Aarushi Koolwal",
+      load:"lazy",
       img:"assets/img/team/Aarushi.jpg",
       desig:"Head Columnist",
       domain:"Cyber Security and Digital Forensics (2019)",
@@ -94,6 +105,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Mansi Bakhshi",
+      load:"lazy",
       img:"assets/img/team/Mansi.jpg",
       desig:"Columnist",
       domain:"Cyber Security and Digital Forensics (2020)",
@@ -101,6 +113,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Khushi Garg",
+      load:"lazy",
       img:"assets/img/team/Khushi.jpg",
       desig:"Columnist",
       domain:"Cyber Security and Digital Forensics (2020)",
@@ -108,6 +121,7 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Saket Upadhyay",
+      load:"lazy",
       img:"assets/img/team/Saket.jpg",
       desig:"External Affair",
       domain:"Cyber Security and Digital Forensics (2018)",
@@ -115,12 +129,24 @@ export class TeamPage implements OnInit {
     },
     {
       name:"Fardeen Ahemed",
+      load:"lazy",
       img:"assets/img/team/Fardeen.jpg",
       desig:"External Affair",
       domain:"Cyber Security and Digital Forensics (2018)",
       linkedin:"",
     }
   ]
+
+  // checkLoading(index){
+  //   if(index<3){
+  //     let loadMode ="eager"
+  //     return loadMode
+  //   }
+  //   else{
+  //     let loadMode ="lazy"
+  //     return loadMode
+  //   }
+  // }
   ngOnInit() {
     // console.log(this.members[0])
     // this.teamService.getTeams('2021').subscribe(res=>{console.log('query',res)})
