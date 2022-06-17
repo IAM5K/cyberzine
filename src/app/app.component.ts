@@ -1,4 +1,6 @@
 import { Component, HostListener } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -17,12 +19,27 @@ export class AppComponent {
     { title: 'FAQ', url: 'faq', icon: 'warning' },
   ];
 
-  constructor() {}
+  constructor(private gtmService: GoogleTagManagerService,
+    private router: Router
+    ) {}
 
   ngOnInit():void {
     this.innerWidth = window.innerWidth;
-    this.confSidenav()
+    this.confSidenav();
   }
+  ngAfterViewInit():void{
+    this.router.events.forEach(item => {
+      if (item instanceof NavigationEnd) {
+          const gtmTag = {
+              event: 'page',
+              pageName: item.url
+          };
+
+          this.gtmService.pushTag(gtmTag);
+      }
+    });
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.innerWidth = window.innerWidth;

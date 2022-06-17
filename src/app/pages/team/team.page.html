@@ -18,7 +18,9 @@
     <div class="team">
           <ion-card class="team_member" *ngFor="let t of members; index as i">
             <div class="team-img-container">
-              <img class="member-img" [loading]="i > 3? 'lazy':'eager'" [src]="t?.img" [alt]="t?.name"/>
+              <div *ngIf="i > 0; then loadLazy else loadEager"></div>
+                <ng-template #loadEager><img class="member-img" loading="eager" [src]="t?.img" [alt]="t?.name"/></ng-template>
+                <ng-template #loadLazy><img class="member-img" loading="lazy" [src]="t?.img" [alt]="t?.name"/></ng-template>
             </div>
             <ion-card-header>
               <ion-card-subtitle class="bold role"  >{{t?.desig}}</ion-card-subtitle>

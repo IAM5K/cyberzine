@@ -11,6 +11,8 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage';
 import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { environment } from 'src/environments/environment';
+import { GoogleTagManagerModule } from 'angular-google-tag-manager';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,7 +22,10 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleTagManagerModule.forRoot({
+      id: environment.GTM_ID,
+    })
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
