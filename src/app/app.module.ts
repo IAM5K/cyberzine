@@ -12,6 +12,7 @@ import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { environment } from 'src/environments/environment';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,7 +30,8 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    InAppBrowser
+    InAppBrowser,
+    AuthService
   ],
   bootstrap: [AppComponent],
 })

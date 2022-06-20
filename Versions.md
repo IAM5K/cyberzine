@@ -13,7 +13,9 @@ v 2.0.2 : Submission Rules Accessibilty patch.\
 v 2.0.3 : Fonts, Styling, Logo optimised, Home page Changed(Beta).
 v 2.0.4 : Team Photo optimized
 v 2.0.5 : Home and Team page optimized.
+v 2.0.6 : Accessibity and Best Practice optimized in team page and app.
 
+v 2.1.0 : Query Form available in FAQ page.
 
 # Task
 Define Explicit Height and Width.

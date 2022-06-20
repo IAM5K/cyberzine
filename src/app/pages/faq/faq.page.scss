@@ -13,3 +13,24 @@
   margin-bottom:2%;
   font-size: 1.2rem;
 }
+.ask-query{
+  width: 95%;
+  margin: 20px auto 50px auto;
+  color: var(--ion-color-primary);
+}
+.input-item{
+  margin:10px auto;
+}
+.error{
+  color: var(--ion-color-danger);
+  font-weight: bold;
+  // margin:4px auto 10px auto;
+}
+.res-success{
+  color: var(--ion-color-success);
+  margin: 5px;
+}
+.res-primary{
+  color: var(--ion-color-primary);
+  margin: 5px;
+}

@@ -56,5 +56,76 @@
         </ol>
       </div>
     </div>
+    <div class="ask-query">
+      <h2>Have Queries? Ask Here.</h2>
+      <form [formGroup]="queryForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Name</ion-label>
+            <ion-input formControlName="name" type="text" clear-input></ion-input>
+          </ion-item>
+          <div *ngIf="name.touched" class="error">
+            <span *ngIf="name.touched && errorControl.name.errors?.required">Name is required.</span>
+            <span *ngIf="errorControl.name.errors?.minlength">Name should be min 4 characters long.</span>
+          </div>
+        </div>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="text" clear-input></ion-input>
+          </ion-item>
+          <div *ngIf="email.touched" class="error">
+            <span *ngIf="email.touched && errorControl.email.errors?.required">Email is required.</span>
+            <span *ngIf="errorControl.email.errors?.pattern">Please provide valid email id.</span>
+          </div>
+        </div>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Mobile</ion-label>
+            <ion-input formControlName="mobile" type="text" clear-input max-length="10" ></ion-input>
+          </ion-item>
+          <div *ngIf="mobile.errors" class="error">
+            <span *ngIf="mobile.touched && errorControl.mobile.errors?.required">Mobile Number is required.</span>
+            <span *ngIf="errorControl.mobile.errors?.pattern">Mobile Number can be Digits only. <br> </span>
+            <span *ngIf="errorControl.mobile.errors?.minlength">Mobile Number Should be 10 Digits Long.</span>
+            <span *ngIf="errorControl.mobile.errors?.minlength">Mobile Number exceeded 10 Digits.</span>
+          </div>
+        </div>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Subject</ion-label>
+            <ion-input formControlName="sub" type="text" clear-input></ion-input>
+          </ion-item>
+          <div *ngIf="errorControl.sub.errors" class="error">
+            <span *ngIf="sub.touched && errorControl.sub.errors?.required">Subject is required.</span>
+            <span *ngIf="errorControl.sub.errors?.minlength">Subject should be min 4 characters long.</span>
+            <span *ngIf="errorControl.sub.errors?.pattern">Only Alphabets and Numbers are Allowed!</span>
+          </div>
+        </div>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Message</ion-label>
+            <ion-textarea formControlName="msg" type="text" clear-input></ion-textarea>
+          </ion-item>
+          <div *ngIf="errorControl.msg.errors" class="error">
+            <span *ngIf="msg.touched && errorControl.msg.errors?.required">Message is required.</span>
+            <span *ngIf="errorControl.msg.errors?.minlength">Message should be min 4 characters long.</span>
+            <span *ngIf="errorControl.msg.errors?.pattern">Only Alphabets and Numbers are Allowed!</span>
+          </div>
+        </div>
+        
+        <ion-row>
+          <ion-col>
+            <ion-button [disabled]="queryForm.untouched || queryForm.invalid" color="primary" type="submit">Submit</ion-button>
+            <ion-button [disabled]="queryForm.untouched" color="primary" type="reset">Reset Form</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <div *ngIf="isSubmitted">
+          <h4 class="res-success bold">Query Submitted Successfully!</h4>
+          <h4 class="res-primary bold">Our team will reach out to you soon.</h4>
+        </div>
+      </form>
+    </div>
   </div>
 </ion-content>

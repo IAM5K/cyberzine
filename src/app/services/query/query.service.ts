@@ -14,6 +14,6 @@ export class QueryService {
   }
 
   getQuery(){
-    return this.queryCollection.valueChanges();
+    return this.queryCollection.valueChanges({idField:'idField'});
   }
 }
