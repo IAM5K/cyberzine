@@ -15,6 +15,8 @@ v 2.0.4 : Team Photo optimized.\
 v 2.0.5 : Home and Team page Accessibity and Best Practice optimized.\
 v 2.0.6 : Added Google Tag Manager and setup Google Analytics.(Released on 16 Jun 2022 00:45)\
 
+v 2.0.7 : Header patch for IOS  to all pages
+
 v 2.1.0 : Query Form available in FAQ page. Reactive Forms and Validation.\
           Users can successfully post their query and it will be stored in server.\
 v 2.1.1 : Editor Mode added with dashboard, login, queries, reply-modal, submissions page.\
