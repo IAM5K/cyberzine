@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/compat/firestore';
+import { AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { QueryService } from 'src/app/services/query/query.service';
 import { serverTimestamp } from '@angular/fire/firestore';
@@ -16,11 +16,10 @@ export class FaqPage implements OnInit {
   isSubmitted = false;
 
   constructor(
-    private afs:AngularFirestore,
     private queryService: QueryService,
     public formBuilder: FormBuilder
   ){ 
-    this.queryCollection=this.afs.collection('query')
+    this.queryCollection= this.queryService.queryCollection
   }
 
   ngOnInit() {
@@ -29,7 +28,7 @@ export class FaqPage implements OnInit {
       name: ['', [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z ]*$')]],
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       sub: ['', [Validators.required, Validators.minLength(5), Validators.pattern('^[a-zA-Z 0-9 ]*$')]],
-      msg: ['', [Validators.required, Validators.minLength(5), Validators.pattern('^[a-zA-Z 0-9 ]*$')]],
+      msg: ['', [Validators.required, Validators.minLength(5), Validators.pattern('^[a-zA-Z 0-9 ., \n]*$')]],
       mobile: ['', [Validators.required, Validators.pattern('^[0-9]+$'), Validators.minLength(10), Validators.maxLength(10)]],
       answer:['', [ Validators.minLength(5), Validators.pattern('^[a-zA-Z 0-9]*$')]],
       answeredBy:['', [Validators.minLength(5), Validators.pattern('^[a-zA-Z0-9 ]*$')]],

@@ -1,0 +1,25 @@
+.no-border{
+  --border-style:hidden;
+}
+.refernce-data,.reply-form{
+  width: 95%;
+  margin:20px auto;
+}
+.reply-form ion-item{
+  margin: 10px auto;
+}
+.answered{
+  display: flex;
+
+}
+.answer-label{
+  margin:2px 6px;
+}
+.error{
+  color: var(--ion-color-danger);
+}
+.input-item ion-textarea{
+  min-height: 55px !important;
+  word-wrap: break-word;
+  overflow: visible !important;
+}

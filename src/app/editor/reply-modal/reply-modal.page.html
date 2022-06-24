@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item class="no-border">
+      <ion-title >Reply Query</ion-title>
+      <ion-icon size="large" ios="close-outline" md="close-sharp" (click)="dismissModal()" color="primary"></ion-icon>
+    </ion-item>
+
+  </ion-toolbar>
+ </ion-header>
+ <ion-content>
+   <div class="reply-form">
+    <div class="refernce-data">
+      <p><b>Name: </b> {{queryData.name}}</p>
+      <p><b>Email: </b> {{queryData.email}}</p>
+      <p><b>Subject: </b> {{queryData.sub}}</p>
+      <p><b>Message: </b> {{queryData.msg}}</p>
+      <p><b>Asked At: </b> {{queryTime}}</p>
+    </div>
+    <div class="reply-form">
+      <form [formGroup]="replyForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Answered By</ion-label>
+            <ion-input formControlName="answeredBy" type="text" clear-input></ion-input>
+          </ion-item>
+          <div *ngIf="answeredBy.touched" class="error">
+            <span *ngIf="answeredBy.touched && errorControl.answeredBy.errors?.required">Name is required.</span>
+            <span *ngIf="errorControl.answeredBy.errors?.minlength">Name should be min 4 characters long.</span>
+          </div>
+        </div>
+        <div class="input-item">
+          <ion-item fill="outline">
+            <ion-label position="floating">Answer</ion-label>
+            <ion-textarea  autoGrow="true" style="min-height:50px ;" formControlName="answer" type="text" spellcheck="true" clear-input></ion-textarea>
+          </ion-item>
+          <div *ngIf="errorControl.answer.errors" class="error">
+            <span *ngIf="answer.touched && errorControl.answer.errors?.required">Message is required.</span>
+            <span *ngIf="errorControl.answer.errors?.minlength">Message should be min 4 characters long.</span>
+            <span *ngIf="errorControl.answer.errors?.pattern">Only Alphabets and Numbers are Allowed!</span>
+          </div>
+        </div>
+
+        <div class="input-item answered">
+          <!-- <ion-item class="no-border ion-text-left"> -->
+
+            <ion-checkbox slot="start" color="success" formControlName="displayFaq"></ion-checkbox>
+            <ion-label class="answer-label">Display in FAQ</ion-label>
+          <!-- </ion-item> -->
+         
+          
+        </div>
+        <ion-row>
+          <ion-col>
+            <ion-button [disabled]="replyForm.untouched || replyForm.invalid" color="primary" type="submit">Submit</ion-button>
+            <ion-button [disabled]="replyForm.untouched" color="primary" type="reset">Reset Form</ion-button>
+          </ion-col>
+        </ion-row>
+        <div *ngIf="isSubmitted">
+          <h4 class="res-success bold">Query Submitted Successfully!</h4>
+          <h4 class="res-primary bold">Our team will reach out to you soon.</h4>
+        </div>
+      </form>
+    </div>
+   </div>
+ </ion-content>

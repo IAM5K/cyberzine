@@ -4,17 +4,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FaqPageRoutingModule } from './faq-routing.module';
+import { ReplyModalPageRoutingModule } from './reply-modal-routing.module';
 
-import { FaqPage } from './faq.page';
+import { ReplyModalPage } from './reply-modal.page';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     IonicModule,
-    FaqPageRoutingModule
+    ReplyModalPageRoutingModule
   ],
-  declarations: [FaqPage]
+  declarations: [ReplyModalPage]
 })
-export class FaqPageModule {}
+export class ReplyModalPageModule {}
