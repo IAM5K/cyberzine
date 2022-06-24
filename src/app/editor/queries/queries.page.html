@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ title }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <div class="queries">
+      <ion-card  *ngFor="let query of queryObservable | async">
+        <ion-card-header>
+          <ion-card-subtitle>Name: {{query?.name}}</ion-card-subtitle>
+          <ion-card-title>Subject: {{query?.sub}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <p>Email: {{query?.email}}</p>
+          <p>Mobile: {{query?.mobile}}</p>
+          <p>Query: {{query?.msg}}</p>
+          <p>Asked On:{{formatDate(query?.createdAt)}}</p>
+
+          <p *ngIf="query.answeredAt!==''">Answered By:{{query.answeredBy}} at {{formatDate(query?.answeredAt)}}</p>
+          <ion-button *ngIf="query.answeredAt==''" (click)="replyQuery(query)" color="success" >Answer </ion-button>
+          <ion-button *ngIf="query.answeredAt!==''" (click)="replyQuery(query)" color="warning" >Update </ion-button>
+          <ion-button (click)="delQuery(query?.idField)"color="danger" >
+            <ion-icon name="trash" >Trash</ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>
