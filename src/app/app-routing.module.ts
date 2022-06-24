@@ -26,6 +26,26 @@ const routes: Routes = [
   {
     path: 'submission',
     loadChildren: () => import('./pages/rules/rules.module').then( m => m.RulesPageModule)
+  },
+  {
+    path: 'editor/login',
+    loadChildren: () => import('./editor/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'editor/dashboard',
+    loadChildren: () => import('./editor/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'editor/queries',
+    loadChildren: () => import('./editor/queries/queries.module').then( m => m.QueriesPageModule)
+  },
+  {
+    path: 'editor/submissions',
+    loadChildren: () => import('./editor/submissions/submissions.module').then( m => m.SubmissionsPageModule)
+  },
+  {
+    path: 'reply',
+    loadChildren: () => import('./editor/reply-modal/reply-modal.module').then( m => m.ReplyModalPageModule)
   }
 ];
 

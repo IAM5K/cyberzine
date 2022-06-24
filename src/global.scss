@@ -19,10 +19,11 @@
 
 /* Optional CSS utils that can be commented out */
 // @import "~@ionic/angular/css/padding.css";
-// @import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
 .custom-ion-menu{
   @media screen and (max-width:992px) {
     max-width: 340px;
@@ -31,7 +32,10 @@
 .bold{
   font-weight: bold;
 }
-
+.native-textarea{
+  padding: 0 !important;
+  min-height: 60px !important ;
+}
 .bg-aqua{
   background-color: aqua;
 }
@@ -55,6 +59,10 @@ html {
 a {
   background-color: transparent;
   color: var(--ion-color-primary, #3880ff);
+}
+p{
+  margin: 6px;
+  font-size: 1rem;
 }
 
 h1,h2,h3,h4,h5,h6 {

@@ -13,6 +13,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { environment } from 'src/environments/environment';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { AuthService } from './services/auth/auth.service';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +32,8 @@ import { AuthService } from './services/auth/auth.service';
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     InAppBrowser,
-    AuthService
+    AuthService,
+    DatePipe
   ],
   bootstrap: [AppComponent],
 })
