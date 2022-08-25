@@ -22,6 +22,7 @@ v 2.1.0 : Query Form available in FAQ page. Reactive Forms and Validation.\
 v 2.1.1 : Editor Mode added with dashboard, login, queries, reply-modal, submissions page.\
           Query page setup for listing all query with answer and delete Button with Alert Controller.\
           Opens Reply Modal to reply and setup listing in FAQ page.\
+v 2.1.2 : Submission of article.\
 # Task
 
 Define Explicit Height and Width (Done: v 2.0.5).
