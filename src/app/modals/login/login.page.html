@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login to CyberZine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="!user">
+    <form >
+      <ion-row>
+        <ion-col> 
+          <ion-button type="submit" color="success" (click)="login()" expand="block">Login with Google</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ng-container>
+
+    <ion-card *ngIf="user">
+      <ion-img [src]="user?.photoURL"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{user?.email}}</ion-card-subtitle>
+        <ion-card-title>{{user?.displayName}}</ion-card-title>
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button (click)="dismissModal()" color="success">Return Back</ion-button>
+        <ion-button (click)="logout()" color="danger">Logout</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+</ion-content>
