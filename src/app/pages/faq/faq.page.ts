@@ -3,6 +3,7 @@ import { AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { QueryService } from 'src/app/services/query/query.service';
 import { serverTimestamp } from '@angular/fire/firestore';
+import { SeoService } from 'src/app/services/seo/seo.service';
 
 @Component({
   selector: 'app-faq',
@@ -14,15 +15,19 @@ export class FaqPage implements OnInit {
   queryForm: FormGroup;
   queryCollection: AngularFirestoreCollection;
   isSubmitted = false;
+  pageTitle: string="";
+  metaTag: string="";
 
   constructor(
     private queryService: QueryService,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private seoService: SeoService
   ){ 
     this.queryCollection= this.queryService.queryCollection
   }
 
   ngOnInit() {
+    this.seoService.seo(this.pageTitle,this.metaTag)    
     this.queryForm = this.formBuilder.group({
       createdAt:[serverTimestamp()],
       name: ['', [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z ]*$')]],
