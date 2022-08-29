@@ -24,7 +24,8 @@ v 2.1.1 : Editor Mode added with dashboard, login, queries, reply-modal, submiss
           Opens Reply Modal to reply and setup listing in FAQ page.\
 v 2.1.2 : Submission of article.\
 v 2.1.3 : Login before Submission of article .\
-
+v 2.1.4 : Editors section(Dashboard, login, and other page routing).\
+v 2.1.5 : Terms and conditions & privacy policies modal created.\
 # Task
 Define Explicit Height and Width (Done: v 2.0.5).
 contrast ratio in buttons (Done v2.0.5).
