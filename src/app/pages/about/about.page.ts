@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'src/app/services/seo/seo.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
   title="About"
-  constructor() { }
-
+  pageTitle: string="";
+  metaTag: string="";
+  constructor(
+    private seoService: SeoService
+  ) { }
   ngOnInit() {
+    this.seoService.seo(this.pageTitle,this.metaTag)
   }
 
 }
