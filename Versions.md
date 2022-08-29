@@ -23,8 +23,9 @@ v 2.1.1 : Editor Mode added with dashboard, login, queries, reply-modal, submiss
           Query page setup for listing all query with answer and delete Button with Alert Controller.\
           Opens Reply Modal to reply and setup listing in FAQ page.\
 v 2.1.2 : Submission of article.\
-# Task
+v 2.1.3 : Login before Submission of article .\
 
+# Task
 Define Explicit Height and Width (Done: v 2.0.5).
 contrast ratio in buttons (Done v2.0.5).
 SEO For each page.

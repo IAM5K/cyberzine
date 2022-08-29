@@ -14,6 +14,8 @@ import { environment } from 'src/environments/environment';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { AuthService } from './services/auth/auth.service';
 import { DatePipe } from '@angular/common';
+import { AuthGuard } from './guards/auth.guard';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +26,7 @@ import { DatePipe } from '@angular/common';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     GoogleTagManagerModule.forRoot({
       id: environment.GTM_ID,
@@ -33,6 +36,8 @@ import { DatePipe } from '@angular/common';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     InAppBrowser,
     AuthService,
+    AuthGuard,
+    AngularFirestoreModule,
     DatePipe
   ],
   bootstrap: [AppComponent],
