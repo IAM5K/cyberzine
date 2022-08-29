@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { SeoService } from 'src/app/services/seo/seo.service';
 import { TeamService } from 'src/app/services/team/team.service';
 
 @Component({
@@ -10,10 +11,14 @@ import { TeamService } from 'src/app/services/team/team.service';
 export class TeamPage implements OnInit {
 
   title="Our Team"
+  pageTitle: string="";
+  metaTag: string="";
   constructor(
+    private seoService: SeoService,
     private teamService: TeamService
   ) { }
-    loadMode="lazy"
+
+  loadMode="lazy"
   members:any=[
     {
       name:"Divyansh Bhatia",
@@ -136,18 +141,8 @@ export class TeamPage implements OnInit {
       linkedin:"",
     }
   ]
-
-  // checkLoading(index){
-  //   if(index<3){
-  //     let loadMode ="eager"
-  //     return loadMode
-  //   }
-  //   else{
-  //     let loadMode ="lazy"
-  //     return loadMode
-  //   }
-  // }
   ngOnInit() {
+    this.seoService.seo(this.pageTitle,this.metaTag)
     // console.log(this.members[0])
     // this.teamService.getTeams('2021').subscribe(res=>{console.log('query',res)})
     // this.teamService.addMember(this.members[0])
