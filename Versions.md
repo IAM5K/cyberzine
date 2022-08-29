@@ -27,6 +27,7 @@ v 2.1.3 : Login before Submission of article .\
 v 2.1.4 : Editors section(Dashboard, login, and other page routing).\
 v 2.1.5 : Terms and conditions & privacy policies modal created.\
 v 2.1.6 : SEO service added.\
+v 2.1.7 ; Auth Gaurd Added.(Half Configured)\
 # Task
 Define Explicit Height and Width (Done: v 2.0.5).
 contrast ratio in buttons (Done v2.0.5).
