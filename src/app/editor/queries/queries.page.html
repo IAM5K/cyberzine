@@ -17,10 +17,10 @@
         </ion-card-header>
       
         <ion-card-content>
-          <p>Email: {{query?.email}}</p>
-          <p>Mobile: {{query?.mobile}}</p>
-          <p>Query: {{query?.msg}}</p>
-          <p>Asked On:{{formatDate(query?.createdAt)}}</p>
+          <p><span class="bold">Email: </span>  {{query?.email}}</p>
+          <p><span class="bold">Mobile: </span>  {{query?.mobile}}</p>
+          <p><span class="bold">Query: </span>  {{query?.msg}}</p>
+          <p><span class="bold">Asked On: </span> {{formatDate(query?.createdAt)}}</p>
 
           <p *ngIf="query.answeredAt!==''">Answered By:{{query.answeredBy}} at {{formatDate(query?.answeredAt)}}</p>
           <ion-button *ngIf="query.answeredAt==''" (click)="replyQuery(query)" color="success" >Answer </ion-button>
