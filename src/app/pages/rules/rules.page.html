@@ -16,7 +16,7 @@
         <ul>
           <li>Any form of interactive as well as informative content (articles, puzzles, reports, research work, etc.)
             shall be accepted as adequate submissions.</li>
-          <li>All work shall be submitted on or before <strong>15 July 2022 </strong><i> (Tentative)</i>.</li>
+          <li>All work shall be submitted on or before <strong>15 September 2022 </strong><i> (Tentative)</i>.</li>
           <li>The author(s) hereby represents and warrants that the submitted work is original and, except for material
             that is clearly identified as to its original source, with permission notices from the copyright owners
             where required, and cited accordingly.</li>
@@ -31,16 +31,15 @@
           submitting this form you agree to follow the aforementioned rules. Once you submit the form we will contact
           you via email to complete the process.</p>
       </div>
-
-      <ng-container *ngIf="true">
-        <div class="proceed-to-login">
-          <h4>To Submit your article please login</h4>
-          <ion-button color="primary">Redirect to Login</ion-button>
-        </div>
-      </ng-container>
+      <div class="proceed-to-login" *ngIf="userData == (null|| undefined)">
+        <h4>To Submit your article please login</h4>
+        <ion-button (click)="loginModal()" color="primary">Login</ion-button>
+      </div>
     </section>
-    <section class="submission-form">
-      
+    <section class="submission-frame" *ngIf="userData !== (undefined || null)">
+      <h4> {{userData?.email}}</h4>
+      <!-- <ion-button color="primary" (click)="getUserRole()">Get Role</ion-button> -->
+
     </section>
   </div>
 
