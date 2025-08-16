@@ -11,11 +11,10 @@ import { TeamService } from 'src/app/services/team/team.service';
 export class TeamPage implements OnInit {
 
   title="Our Team"
-  pageTitle: string="";
-  metaTag: string="";
+  pageTitle: string="Team | Cyberzine | VIT Bhopal - Cybersecurity & Digital Forensics";
+  metaTag: string="Cyberzine, VIT Bhopal, cybersecurity magazine, digital forensics, cyber threats, cyber education, cyber warriors, cyber awareness, cyber ethics, iam5k";
   constructor(
-    private seoService: SeoService,
-    private teamService: TeamService
+    private seoService: SeoService
   ) { }
 
   loadMode="lazy"

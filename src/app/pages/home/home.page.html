@@ -17,18 +17,12 @@
           [ngClass]="{'active-btn': mag==item, 'inactive-btn':mag!==item}" >{{item}}</button>
         </div>
         <div class="cover-page">
-          <img class="cover-img" loading="lazy" [src]="'assets/img/'+ mag+'.jpg'" [alt]="'assets/img/'+ mag+'.jpg'+'Front page of Cyberzine'">
+          <img class="cover-img" loading="lazy" [src]="'assets/img/'+ mag+'.avif'" [alt]="'assets/img/'+ mag+'.avif'+'Front page of Cyberzine'">
         </div>
         <div class="library">
-          <a *ngIf="mag=='Cyberzine 2021'" href="https://drive.google.com/file/d/1oSufvf4dPu6hSDBpUhMYcthLtNhVmW0P/view?usp=sharing" target="_blank">
-            <button class="opt-btn read-btn">Read Now!</button>
-          </a>
-          <a *ngIf="mag=='Cyberzine 2020'" href="https://drive.google.com/file/d/1K_UF7qOO-8VbRqIVU8tOr7O6SYL06Z0a/view?usp=sharing" target="_blank">
-            <button class="opt-btn read-btn">Read Now!</button>
-          </a>
-          <a *ngIf="mag=='Cyberzine 2019'" href="https://drive.google.com/file/d/1sWFFc7BDsXTYuKWoaMFHKlkJopV2-mzm/view?usp=sharing" target="_blank">
-            <button class="opt-btn read-btn">Read Now!</button>
-          </a>
+          <button *ngIf="mag=='Cyberzine 2021'" class="opt-btn read-btn" (click)="openMag('2021')">Read Now!</button>
+          <button *ngIf="mag=='Cyberzine 2020'" class="opt-btn read-btn" (click)="openMag('2020')">Read Now!</button>
+          <button *ngIf="mag=='Cyberzine 2019'" class="opt-btn read-btn" (click)="openMag('2019')">Read Now!</button>
         </div>
       </div>
       <ion-note class="public-note">

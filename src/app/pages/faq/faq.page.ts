@@ -15,8 +15,8 @@ export class FaqPage implements OnInit {
   queryForm: FormGroup;
   queryCollection: AngularFirestoreCollection;
   isSubmitted = false;
-  pageTitle: string="";
-  metaTag: string="";
+  pageTitle: string="FAQ - Frequently Asked Questions | Cyberzine | VIT Bhopal";
+  metaTag: string="Cyberzine, VIT Bhopal, cybersecurity magazine, digital forensics, cyber threats, cyber education, cyber warriors, cyber awareness, cyber ethics";
 
   constructor(
     private queryService: QueryService,

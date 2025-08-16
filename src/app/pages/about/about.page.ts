@@ -8,8 +8,8 @@ import { SeoService } from 'src/app/services/seo/seo.service';
 })
 export class AboutPage implements OnInit {
   title="About"
-  pageTitle: string="";
-  metaTag: string="";
+  pageTitle: string="About Cyberzine | VIT Bhopal - Cybersecurity & Digital Forensics";
+  metaTag: string="Cyberzine, VIT Bhopal, cybersecurity magazine, digital forensics, cyber threats, cyber education, cyber warriors, cyber awareness, cyber ethics";
   constructor(
     private seoService: SeoService
   ) { }

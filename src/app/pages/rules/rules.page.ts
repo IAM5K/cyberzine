@@ -12,8 +12,8 @@ import { SeoService } from 'src/app/services/seo/seo.service';
 export class RulesPage implements OnInit {
 
   title="Submission"
-  pageTitle: string="";
-  metaTag: string="";
+  pageTitle: string="Submission guideline for Cyberzine | VIT Bhopal - Cybersecurity & Digital Forensics";
+  metaTag: string="Cyberzine, VIT Bhopal, cybersecurity magazine, digital forensics, cyber threats, cyber education, cyber warriors, cyber awareness, cyber ethics";
   userData:any=null;
   constructor(
     private seoService: SeoService,

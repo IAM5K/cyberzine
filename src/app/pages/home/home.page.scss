@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: auto;
+  margin: 1rem auto;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
@@ -46,8 +46,7 @@
   padding: 12px;
   width: auto;
   margin: 6px;
-  background-color: var(--ion-color-medium);
-  color: white;
+  background-color: var(--ion-color-light-tint);
   text-transform: uppercase;
   transition: 0.7s;
   @media screen and (max-width:768px) {
@@ -55,15 +54,15 @@
   }
 }
 .active-btn{
-  background-color: var(--ion-color-secondary);
-  color: var(--ion-color-dark);
+  background-color: var(--ion-color-primary);
+  color: var(--ion-color-medium-contrast);
 }
 .inactive-btn:hover{
   opacity: 0.9;
 }
 .read-btn:hover{
   background-color: var(--ion-color-secondary);
-  color: var(--ion-color-dark);
+  color: var(--ion-color-secondary-contrast);
 }
 
 .public-note {
