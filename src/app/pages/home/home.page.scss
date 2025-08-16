@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .home-content{
   width: 100%;
   height: auto;
@@ -62,4 +64,14 @@
 .read-btn:hover{
   background-color: var(--ion-color-secondary);
   color: var(--ion-color-dark);
+}
+
+.public-note {
+  display: block;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 0 5%;
+  font-family: "Cookie", cursive;
+  color: var(--ion-color-secondary);
 }

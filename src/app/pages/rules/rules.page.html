@@ -11,8 +11,23 @@
   <div id="container">
     <section class="submission-frame">
       <div class="rules">
+        <h1>Contributing Guidelines for CyberZine</h1>
+        <ion-note color="warning">*Please read these guidelines carefully before preparing your submission.</ion-note>
+        <ul>
+          <li><strong>Originality First:</strong> Submissions must be your own work. Plagiarism in any form — whether direct copying, improper paraphrasing, or uncredited use of another’s ideas — will not be tolerated. If you draw inspiration from existing work, ensure it is properly cited and acknowledged.</li>
+          <li><strong>Responsible Writing (No AI Content):</strong> Authors must not use AI tools (such as text, code, or image generators) to create content for their submission. While basic grammar and spell-check tools like Grammarly are acceptable, the core writing, research, and analysis should come from your own effort. Exploring, researching, and writing independently not only ensures originality but also helps you expand your knowledge horizon, which aligns with the spirit of CyberZine.</li>
+          <li><strong>Fact-Checking & Accuracy:</strong> Authors are expected to cross-check all facts, data, and statistics with credible sources. Whenever possible, include references to research papers, reports, or trusted news outlets to strengthen authenticity.</li>
+          <li><strong>Self-Learning Spirit:</strong> Treat this as an opportunity for self-learning and exploration. Don’t hesitate to experiment with new ideas, puzzles, or formats, as long as they are well-structured and accurate. Submissions should not just inform but also inspire readers to learn more about the cyber world.</li>
+          <li><strong>Respectful & Ethical Writing:</strong> Content must not include offensive, discriminatory, or harmful material. Authors are expected to uphold the ethical values of the cybersecurity community — promoting awareness, safety, and positive innovation.</li>
+        </ul>
+        <p>By contributing to CyberZine, you are joining a community that values <strong>curiosity, integrity, and education</strong>. Together, let’s create a magazine that sparks meaningful conversations and builds a safer, smarter digital world.</p>
+      </div>
+    </section>
+
+    <section class="submission-frame">
+      <div class="rules">
         <h1>Submission Rules for CyberZine 2022</h1>
-        <p style="color: red;">*Authors must read and abide by all the rules presented henceforth carefully.</p>
+        <ion-note color="warning">*Authors must read and abide by all the rules presented henceforth carefully.</ion-note>
         <ul>
           <li>Any form of interactive as well as informative content (articles, puzzles, reports, research work, etc.)
             shall be accepted as adequate submissions.</li>
@@ -27,20 +42,14 @@
           <li>The author(s) must notify the team if the content submitted has also been published elsewhere under their
             name.</li>
         </ul>
-        <p>Stay tuned and Please fill out the form <i>(will be available soon)</i> to proceed with your submission. By
+        <!-- <p>Stay tuned and Please fill out the form <i>(will be available soon)</i> to proceed with your submission. By
           submitting this form you agree to follow the aforementioned rules. Once you submit the form we will contact
-          you via email to complete the process.</p>
-      </div>
-      <div class="proceed-to-login" *ngIf="userData == (null|| undefined)">
-        <h4>To Submit your article please login</h4>
-        <ion-button (click)="loginModal()" color="primary">Login</ion-button>
-      </div>
-    </section>
-    <section class="submission-frame" *ngIf="userData !== (undefined || null)">
-      <h4> {{userData?.email}}</h4>
-      <!-- <ion-button color="primary" (click)="getUserRole()">Get Role</ion-button> -->
+          you via email to complete the process.</p> -->
 
+        <ion-note color="success">*Please reach out to your program chair, or the CyberZine team, and submit your work through the designated channels. Looking forward to new team and some amazing contributions!</ion-note>
+
+      </div>
     </section>
+
   </div>
-
 </ion-content>

@@ -1,34 +1,34 @@
-.submission-frame{
+.submission-frame {
   height: auto;
   width: 100%;
 }
-.rules,.proceed-to-login{
+.rules,
+.proceed-to-login {
   position: relative;
   width: 100%;
   margin: auto;
-  height:auto;
-  padding:max(2%,20px);
+  height: auto;
+  padding: max(2%, 20px);
   text-align: justify;
-  font-family:serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 1.2rem;
 }
-.rules>h1{
-  font-family: sans-serif;
+.rules > h1 {
+  font-family: serif;
   margin: 0px;
   font-size: 1.7rem;
 }
-.rules li{
+.rules li {
   padding-bottom: 10px;
 }
-.rules>p{
-  color: var(--ion-color-primary);
+.rules > ion-note {
   font-weight: bold;
 }
-.rules i{
+.rules i {
   color: var(--ion-color-danger-tint);
 }
-.rules sub{
-  color:rgb(94, 255, 0);
+.rules sub {
+  color: rgb(94, 255, 0);
   font-weight: bold;
   padding-bottom: 10px;
 }
