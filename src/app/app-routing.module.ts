@@ -29,9 +29,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/rules/rules.module').then( m => m.RulesPageModule)
   },
   {
-    path: 'editor',
-    loadChildren: () => import('./editor/editor.module').then( m => m.EditorPageModule),
-    // canActivate:[AuthGuard]
+    path:'**',
+    redirectTo: 'home'
   }
 ];
 
